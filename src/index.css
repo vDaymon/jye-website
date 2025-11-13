@@ -7,6 +7,7 @@
   --text: #0f1720; /* primary text (dark) */
   --bg: #ffffff; /* white background */
   --max-width: 1100px;
+  --navbar-height: 64px; /* reserve space for the navbar so it doesn't overlap content */
   color-scheme: light;
   font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
@@ -22,6 +23,18 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
+}
+
+/* Prevent any accidental horizontal overflow */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Ensure media (images, iframes) don't cause horizontal scroll */
+img, iframe, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 a {
@@ -40,6 +53,9 @@ a:hover {
 
 main {
   flex: 1;
+  /* reserve space at the top equal to navbar height so content isn't
+     covered when the navbar becomes sticky */
+  padding-top: var(--navbar-height);
 }
 
 .container {
@@ -66,9 +82,14 @@ main {
 }
 
 .navbar {
-  position: sticky;
+  /* Make the navbar fixed to the viewport so it stays visible like the
+     floating WhatsApp button (which uses position:fixed). We keep top
+     padding on `main` so the navbar does not overlap the hero on load. */
+  position: fixed;
   top: 0;
-  z-index: 40;
+  left: 0;
+  right: 0;
+  z-index: 100;
   background: #ffffff;
   border-bottom: 1px solid #e6e7e8;
 }
@@ -79,6 +100,7 @@ main {
   gap: 1rem;
   padding: 1rem 2rem;
   position: relative;
+  min-height: var(--navbar-height);
 }
 .brand {
   font-weight: 700;
@@ -270,8 +292,6 @@ main {
   text-align: center;
 }
 
-/* Contact grid: two equal columns for the two cards, map spans full width below */
-
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -298,6 +318,7 @@ main {
   color: var(--muted);
   min-height: 220px; /* match testimonial visual weight */
   height: 100%; /* ensure grid items fill the row height so both cards match */
+  overflow: visible; /* ensure inner elements (buttons) are not clipped */
 }
 
 .map-card {
@@ -343,6 +364,17 @@ main {
     height: 300px;
   }
   .contact-card { padding: 1rem; }
+
+  /* On small screens make the navbar fixed (like the floating WhatsApp
+     button) so it remains visible regardless of scroll. Keep the reserved
+     top padding on `main` so it doesn't overlap the hero. */
+  .navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 90; /* above most content but below floating WA (120) */
+  }
 }
 
 .site-footer {
@@ -517,6 +549,14 @@ main {
   object-fit: contain;
   margin-right: 0.6rem;
   vertical-align: middle;
+}
+
+/* Make buttons inside contact cards layout reliably (icon + text) */
+.contact-card .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap; /* prevent button text from wrapping and appearing cut */
 }
 
 @media (max-width: 900px) {
