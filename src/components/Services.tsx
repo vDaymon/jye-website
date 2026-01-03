@@ -5,13 +5,13 @@ const services = [
   {
     title: 'Suministro, fabricación e instalación',
     desc: 'Desarrollamos estructuras metálicas, pérgolas, pasamanos, escaleras y puertas a medida; controlamos toda la cadena de valor para asegurar acabados premium y entregas puntuales.',
-    image: '/public/imgs/Pasamanos vehiculares.jpeg',
+    image: '/imgs/Pasamanos vehiculares.jpeg',
     alt: 'Estructura metálica instalada a medida',
   },
   {
     title: 'Mantenimiento de estructuras metálicas',
     desc: 'Realizamos diagnósticos preventivos, correcciones y repintado especializado para prolongar la vida útil de estructuras metálicas en interiores y exteriores.',
-    image: '/public/imgs/EVIDENCIA DE TRABAJO 2.jpeg',
+    image: '/imgs/EVIDENCIA DE TRABAJO 2.jpeg',
     alt: 'Equipo realizando mantenimiento metálico',
   },
 ]

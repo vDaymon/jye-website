@@ -3,33 +3,19 @@ import { motion, AnimatePresence } from 'framer-motion'
 import AnimateIn from './AnimateIn'
 
 const pergolaFolder = '/imgs/pergola del retiro'
-const pergolaImageNames = [
-  'PÉRGOLA RETIRO.jpeg',
-  'Pérgola en el Retiro.jpeg',
-  'WhatsApp Image 2025-06-17 at 2.08.18 PM.jpeg',
-  'WhatsApp Image 2025-06-17 at 2.08.28 PM (1).jpeg',
-]
+const pergolaImageNames = ['PERGOLARETIRO.jpeg', 'PergolaenelRetiro.jpeg', 'pergola4.jpeg', 'pergola5.jpeg']
 
-const pergolaImages = pergolaImageNames.map((name) => {
-  const normalized = name.normalize('NFD')
-  return `${encodeURI(pergolaFolder)}/${encodeURIComponent(normalized)}`
-})
+const pergolaImages = pergolaImageNames.map((name) => `${encodeURI(pergolaFolder)}/${encodeURIComponent(name)}`)
 
 const pasamanosFolder = '/imgs/pasamanos vehicular'
-const pasamanosImageNames = ['Pasamanos en vía San Luis.jpeg', 'Pasamanos vehiculares.jpeg']
+const pasamanosImageNames = ['PasamanosenviaSan Luis.jpeg', 'Pasamanosvehiculares.jpeg']
 
-const pasamanosImages = pasamanosImageNames.map((name) => {
-  const normalized = name.normalize('NFD')
-  return `${encodeURI(pasamanosFolder)}/${encodeURIComponent(normalized)}`
-})
+const pasamanosImages = pasamanosImageNames.map((name) => `${encodeURI(pasamanosFolder)}/${encodeURIComponent(name)}`)
 
 const fachadaFolder = '/imgs/fachada crista'
-const fachadaImageNames = ['CRISTA.jpeg', 'FACHADA.jpeg', 'Fachada en CRISTA.jpeg']
+const fachadaImageNames = ['CRISTA.jpeg', 'FACHADA.jpeg', 'FachadaenCRISTA.jpeg']
 
-const fachadaImages = fachadaImageNames.map((name) => {
-  const normalized = name.normalize('NFD')
-  return `${encodeURI(fachadaFolder)}/${encodeURIComponent(normalized)}`
-})
+const fachadaImages = fachadaImageNames.map((name) => `${encodeURI(fachadaFolder)}/${encodeURIComponent(name)}`)
 
 const projects = [
   {
