@@ -11,10 +11,10 @@ import FloatingWhatsApp from './components/FloatingWhatsApp'
 
 export default function App() {
   return (
-    <div className="app-root">
+    <div className="min-h-screen bg-white text-slate-900">
       <Navbar />
 
-      <main>
+      <main className="flex flex-col gap-20 pt-24 lg:pt-28">
         <Hero />
         <Services />
         <Pergola />

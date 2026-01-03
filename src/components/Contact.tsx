@@ -1,53 +1,74 @@
 import AnimateIn from './AnimateIn'
 
 export default function Contact() {
-  const phone = '+57 310 8210408' // número WhatsApp proporcionado
+  const phone = '+57 310 8210408'
   const whatsappLink = `https://wa.me/${phone.replace(/\D/g, '')}`
   const address = 'Calle 65 #74-105 San German'
   const mapsQuery = encodeURIComponent(address + ' Colombia')
   const mapsSrc = `https://maps.google.com/maps?q=${mapsQuery}&z=15&output=embed`
 
   return (
-    <section id="contact" className="section contact">
-      <div className="container">
+    <section id="contact" className="px-6">
+      <div className="mx-auto max-w-6xl">
         <AnimateIn>
-          <h2>Contacto y ubicación</h2>
+          <h2 className="text-center text-3xl font-bold text-slate-900">Contacto y ubicación</h2>
         </AnimateIn>
 
-        {/* Grid: two cards side-by-side; map below (full width) */}
-        <div className="contact-grid">
-          <AnimateIn className="contact-card">
-            <h3>Oficina central</h3>
-            <p>{address}<br/>San German</p>
-            <p>
-              <strong>Tel:</strong> <a href={`tel:${phone}`}>{phone}</a>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <AnimateIn className="flex h-full flex-col items-center justify-center gap-3 rounded-2xl border border-slate-100 bg-white px-8 py-10 text-center shadow-[0_28px_72px_-36px_rgba(15,23,42,0.48)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_36px_96px_-32px_rgba(15,23,42,0.58)]">
+            <h3 className="text-2xl font-semibold text-slate-900">Oficina central</h3>
+            <p className="text-sm text-slate-600">
+              {address}
+              <br />
+              San German
             </p>
-            <p>
-              <strong>Email:</strong> <a href="mailto:estructurasmetalicasje@gmail.com">estructurasmetalicasje@gmail.com</a>
+            <p className="text-sm text-slate-600">
+              <strong className="font-semibold text-slate-900">Tel:</strong>{' '}
+              <a className="text-[#2c6334] hover:underline" href={`tel:${phone}`}>
+                {phone}
+              </a>
             </p>
-            <p style={{ marginTop: '0.6rem' }}>
-              <a href="https://www.facebook.com/EstructurasMetalicasJyE" target="_blank" rel="noreferrer">Facebook</a> · <a href="https://www.instagram.com/estructurasmetalicasjye/" target="_blank" rel="noreferrer">Instagram</a>
+            <p className="text-sm text-slate-600">
+              <strong className="font-semibold text-slate-900">Email:</strong>{' '}
+              <a className="text-[#2c6334] hover:underline" href="mailto:estructurasmetalicasje@gmail.com">
+                estructurasmetalicasje@gmail.com
+              </a>
             </p>
-          </AnimateIn>
-
-          <AnimateIn className="contact-card right-card" delay={0.04}>
-            <h3>Escríbenos</h3>
-            <p>Abre WhatsApp para iniciar una conversación con nuestro equipo.</p>
-            <p>
-              <a className="btn primary" href={whatsappLink} target="_blank" rel="noreferrer">
-                <img src="/imgs/whatsapp.png" alt="WhatsApp" className="wa-icon" />
-                WhatsApp
+            <p className="text-sm text-slate-600">
+              <a className="text-[#2c6334] hover:underline" href="https://www.facebook.com/EstructurasMetalicasJyE" target="_blank" rel="noreferrer">
+                Facebook
+              </a>{' '}
+              ·{' '}
+              <a className="text-[#2c6334] hover:underline" href="https://www.instagram.com/estructurasmetalicasjye/" target="_blank" rel="noreferrer">
+                Instagram
               </a>
             </p>
           </AnimateIn>
+
+          <AnimateIn
+            className="flex h-full flex-col items-center justify-center gap-4 rounded-2xl border border-slate-100 bg-slate-50 px-8 py-10 text-center shadow-[0_28px_72px_-36px_rgba(15,23,42,0.48)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_36px_96px_-32px_rgba(15,23,42,0.58)]"
+            delay={0.04}
+          >
+            <h3 className="text-2xl font-semibold text-slate-900">Escríbenos</h3>
+            <p className="text-sm text-slate-600">Abre WhatsApp para iniciar una conversación con nuestro equipo.</p>
+            <a
+              className="inline-flex items-center gap-2 rounded-xl bg-[#2c6334] px-6 py-3 text-base font-semibold text-white shadow-lg shadow-[#2c6334]/30 transition hover:bg-[#254f2a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2c6334]"
+              href={whatsappLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="/imgs/whatsapp.png" alt="WhatsApp" className="h-5 w-5" />
+              WhatsApp
+            </a>
+          </AnimateIn>
         </div>
 
-        <div className="map-card" style={{ marginTop: '1.5rem' }}>
-          <h3 style={{ visibility: 'hidden', height: 0, margin: 0 }}>Mapa</h3>
+        <div className="mt-10 overflow-hidden rounded-3xl border border-slate-200 shadow-xl">
+          <h3 className="sr-only">Mapa</h3>
           <iframe
-            title="Mapa - ConstrucPlus"
+            title="Mapa - Estructuras Metálicas J y E"
             src={mapsSrc}
-            className="map-embed"
+            className="h-[360px] w-full"
             loading="lazy"
           />
         </div>

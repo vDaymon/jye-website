@@ -7,28 +7,47 @@ const handleScrollToServices = () => {
 
 export default function Hero() {
   return (
-    <section id="hero" className="section hero">
-      <div className="container hero-inner">
+    <section id="hero" className="relative isolate h-[75vh] overflow-hidden -mt-[68px] mx-6 rounded-2xl">
+      <div
+        className="absolute inset-0 z-0 bg-cover bg-center"
+        style={{ backgroundImage: "url('/imgs/Fachada en CRISTA.jpeg')" }}
+      />
+      <div className="absolute inset-0 z-0 bg-black/60" />
+
+      <div className="relative z-10 mx-auto flex h-full max-w-5xl flex-col items-center justify-center gap-6 px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="hero-content"
+          className="flex flex-col items-center gap-6 text-white"
         >
-          <h1>TITULAR PRINCIPAL: reemplaza este texto por el título de tu negocio</h1>
-          <p>
-            DESCRIPCIÓN BREVE: escribe 1–2 frases que expliquen qué hace tu
-            empresa y por qué los clientes deben elegirte. Ejemplo: "Proyectos
-            de obra civil y remodelaciones con entrega a tiempo y alta calidad."
-            Mantén el mensaje claro y orientado al cliente.
-          </p>
-          <div className="cta-row">
-            <button className="btn primary" onClick={handleScrollToServices}>
+          <h1 className="text-4xl font-extrabold uppercase tracking-wider text-white sm:text-5xl">
+            ESTRUCTURAS METÁLICAS
+          </h1>
+          <h2 className="max-w-3xl text-lg font-medium text-white/90 sm:text-xl">
+            El cumplimiento es la base de nuestra empresa. Fabricamos e instalamos estructuras metálicas para todo tipo de proyectos.
+          </h2>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <button
+              className="inline-flex min-w-[160px] items-center justify-center rounded-xl bg-[#2c6334] px-6 py-3 text-base font-semibold text-white shadow-lg shadow-[#2c6334]/30 transition hover:bg-[#254f2a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              onClick={handleScrollToServices}
+            >
               Ver servicios
             </button>
-            <a className="btn ghost" href="#projects">Ver proyectos</a>
+            <a
+              className="inline-flex min-w-[160px] items-center justify-center rounded-xl border border-white/80 bg-white px-6 py-3 text-base font-semibold text-[#2c6334] shadow-lg shadow-white/40 transition hover:bg-white/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2c6334]"
+              href="#projects"
+            >
+              Ver proyectos
+            </a>
           </div>
         </motion.div>
+      </div>
+
+      <div className="pointer-events-none absolute inset-x-0 bottom-[-50px] z-20 flex items-center justify-between">
+        <span className="absolute left-0 right-0 top-1/3 h-8 -translate-y-1/2 bg-white"></span>
+        <span className="hero-slide-left relative z-10 -ml-8 h-[110px] w-[220px] rounded-full bg-white shadow-lg shadow-black/10 sm:-ml-16 sm:h-[150px] sm:w-[280px]"></span>
+        <span className="hero-slide-right relative z-10 -mr-8 h-[110px] w-[220px] rounded-full bg-white shadow-lg shadow-black/10 sm:-mr-16 sm:h-[150px] sm:w-[280px]"></span>
       </div>
     </section>
   )
