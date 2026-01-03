@@ -7,7 +7,7 @@ export default function Footer() {
         <AnimateIn>
           <div className="space-y-1 text-slate-600">
             <strong className="text-base font-semibold text-slate-900">Estructuras Metálicas J y E</strong>
-            <p>Soluciones de estructuras • estructurasmetalicasje@gmail.com</p>
+            <p>Ingeniería y montaje de estructuras metálicas en Medellín • estructurasmetalicasje@gmail.com</p>
           </div>
         </AnimateIn>
         <AnimateIn delay={0.03}>

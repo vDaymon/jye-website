@@ -21,7 +21,7 @@ const projects = [
   {
     id: 1,
     title: 'Pérgola Moderna',
-    desc: 'Estructura metálica con policarbonato para terraza residencial.',
+    desc: 'Pérgola metálica artesanal para terraza residencial; estructura liviana en acero con policarbonato filtrante y drenajes ocultos.',
     date: '2025-01-10',
     images: [
       ...pergolaImages,
@@ -30,14 +30,14 @@ const projects = [
   {
     id: 2,
     title: 'Pasamanos Vehicular',
-    desc: 'Protección perimetral en acero para área de carga y descarga.',
+    desc: 'Baranda metálica tipo guardarraíl para vía rural; postes y vigas galvanizadas que controlan desvíos y evitan caídas en taludes.',
     date: '2025-02-22',
     images: pasamanosImages,
   },
   {
     id: 3,
     title: 'Fachada en Crista',
-    desc: 'Instalación de vidrio templado con perfilería de aluminio anodizado.',
+    desc: 'Fachada ventilada en edificio Crista: subestructura metálica, vidrio templado y sellos perimetrales para confort y eficiencia.',
     date: '2025-03-05',
     images: fachadaImages,
   },
@@ -96,6 +96,20 @@ export default function Projects() {
               </motion.article>
             </AnimateIn>
           ))}
+        </div>
+
+        <div className="mt-12 rounded-3xl border border-slate-200 bg-slate-50 p-6 text-center text-slate-700">
+          <h3 className="text-2xl font-semibold text-slate-900">Planifiquemos su proximo proyecto en acero</h3>
+          <p className="mt-2 text-sm leading-6">
+            Enviamos memorias de calculo, cronogramas de montaje y presupuestos ajustados para parques industriales, sedes corporativas y constructoras.
+            Conecte con nuestro equipo para cotizar estructuras metalicas a la medida.
+          </p>
+          <a
+            className="mt-4 inline-flex items-center rounded-xl bg-[#2c6334] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#2c6334]/30 transition hover:bg-[#254f2a]"
+            href="#contact"
+          >
+            Hablar con ingenieria comercial
+          </a>
         </div>
 
         <AnimatePresence>

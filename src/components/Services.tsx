@@ -3,16 +3,27 @@ import AnimateIn from './AnimateIn'
 
 const services = [
   {
-    title: 'Suministro, fabricación e instalación',
-    desc: 'Desarrollamos estructuras metálicas, pérgolas, pasamanos, escaleras y puertas a medida; controlamos toda la cadena de valor para asegurar acabados premium y entregas puntuales.',
+    title: 'Ingeniería, fabricación e instalación',
+    desc: 'Diseñamos pérgolas residenciales, escaleras metálicas, cerramientos, puertas, pasamanos y guardarraíles viales; controlamos la cadena de valor para entregar cálculos avalados, trazabilidad y acabados premium.',
     image: '/imgs/Pasamanos vehiculares.jpeg',
-    alt: 'Estructura metálica instalada a medida',
+    alt: 'Guardarraíl y cerramiento metálico instalado en corredor vial',
+    highlights: [
+      'Modelado en BIM y memorias de cálculo entregadas a interventoría.',
+      'Fabricación en acero al carbón, inoxidable y aluminio con acabados premium.',
+      'Diseño y montaje de escaleras, puertas, cerramientos y guardarraíles personalizados.',
+      'Instalación certificada SST y coordinación con cronogramas de obra civil.',
+    ],
   },
   {
     title: 'Mantenimiento de estructuras metálicas',
-    desc: 'Realizamos diagnósticos preventivos, correcciones y repintado especializado para prolongar la vida útil de estructuras metálicas en interiores y exteriores.',
+    desc: 'Realizamos diagnósticos preventivos, correcciones y repintado especializado para prolongar la vida útil de guardarraíles, cubiertas, escaleras y soportes estructurales en operación.',
     image: '/imgs/EVIDENCIA DE TRABAJO 2.jpeg',
-    alt: 'Equipo realizando mantenimiento metálico',
+    alt: 'Equipo realizando mantenimiento de estructura metálica industrial',
+    highlights: [
+      'Inspección con ensayos no destructivos y reporte de patologías.',
+      'Chorreado, tratamiento anticorrosivo y repintado con especificaciones OEM.',
+      'Planes de mantenimiento programado para plantas industriales, vías y centros logísticos.',
+    ],
   },
 ]
 
@@ -87,9 +98,23 @@ export default function Services() {
                     className="h-56 w-full object-cover transition duration-500 hover:scale-105 lg:h-full"
                   />
                 </div>
-                <div className="flex flex-1 flex-col justify-center gap-3 lg:w-3/5">
+                <div className="flex flex-1 flex-col justify-center gap-4 lg:w-3/5">
                   <h3 className="text-2xl font-semibold text-[#0b2915]">{s.title}</h3>
                   <p className="text-base text-slate-600">{s.desc}</p>
+                  <ul className="grid gap-2 text-sm text-slate-600 sm:grid-cols-2">
+                    {s.highlights?.map((item) => (
+                      <li key={item} className="rounded-xl border border-slate-200 px-4 py-3">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href="#contact"
+                    className="inline-flex w-max items-center gap-2 rounded-lg border border-[#2c6334] px-4 py-2 text-sm font-semibold text-[#2c6334] transition hover:bg-[#2c6334] hover:text-white"
+                  >
+                    Solicitar cotizacion estructural
+                    <span aria-hidden="true">→</span>
+                  </a>
                 </div>
               </motion.div>
             </AnimateIn>

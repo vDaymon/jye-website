@@ -21,12 +21,15 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="flex flex-col items-center gap-6 text-white"
         >
-          <h1 className="text-4xl font-extrabold uppercase tracking-wider text-white sm:text-5xl">
-            ESTRUCTURAS METÁLICAS
+          <h1 className="text-center text-4xl font-extrabold uppercase tracking-wider text-white sm:text-5xl">
+            ESTRUCTURAS METÁLICAS EN ANTIOQUIA
           </h1>
-          <h2 className="max-w-3xl text-lg font-medium text-white/90 sm:text-xl">
-            El cumplimiento es la base de nuestra empresa. Fabricamos e instalamos estructuras metálicas para todo tipo de proyectos.
+          <h2 className="max-w-3xl text-lg font-medium leading-7 text-white/90 sm:text-xl">
+            Ingeniería, fabricación y montaje de estructuras metálicas certificadas para proyectos por contrato: edificios, vías, cerramientos y viviendas en Antioquia y el Área Metropolitana.
           </h2>
+          <p className="max-w-2xl text-sm text-white/80 sm:text-base">
+            Ejecutamos proyectos en acero estructural, cubiertas, guardarraíles viales, escaleras, cerramientos y puertas metálicas con cálculos avalados, trazabilidad de materiales y planes de mantenimiento.
+          </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <button
               className="inline-flex min-w-[160px] items-center justify-center rounded-xl bg-[#2c6334] px-6 py-3 text-base font-semibold text-white shadow-lg shadow-[#2c6334]/30 transition hover:bg-[#254f2a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"

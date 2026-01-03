@@ -22,6 +22,9 @@ export default function Contact() {
               <br />
               San German
             </p>
+            <p className="max-w-xs text-sm text-slate-600">
+              Atendemos proyectos de estructuras metálicas en Medellín, Antioquia y el Área Metropolitana.
+            </p>
             <p className="text-sm text-slate-600">
               <strong className="font-semibold text-slate-900">Tel:</strong>{' '}
               <a className="text-[#2c6334] hover:underline" href={`tel:${phone}`}>

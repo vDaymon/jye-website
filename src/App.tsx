@@ -8,6 +8,7 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Pergola from './components/Pergola'
 import FloatingWhatsApp from './components/FloatingWhatsApp'
+import Faq from './components/Faq'
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Services />
         <Pergola />
         <Projects />
+        <Faq />
         <Testimonials />
         <Contact />
       </main>

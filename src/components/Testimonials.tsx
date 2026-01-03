@@ -4,39 +4,25 @@ import AnimateIn from './AnimateIn'
 
 const testimonials = [
   {
-    name: 'María López',
-    role: 'Gerente de proyecto · Constructora Andes',
-    image: 'https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=facearea&w=160&h=160&q=80',
-    quote:
-      'Coordinan la ingeniería y el montaje con una disciplina admirable; cada viga llegó calibrada y el cierre de obra se dio sin retrabajos ni demoras.',
-  },
-  {
-    name: 'Carlos Méndez',
-    role: 'Director técnico · Inmobiliaria Terracota',
-    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=facearea&w=160&h=160&q=80',
-    quote:
-      'Aportaron cálculos, memoria de materiales y un montaje impecable; la estructura reforzada quedó lista en el tiempo previsto y dentro de normas.',
-  },
-  {
     name: 'Laura Castillo',
     role: 'Arquitecta líder · Estudio Forma',
     image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=facearea&w=160&h=160&q=80',
     quote:
-      'Recrearon nuestro diseño de pérgola con exactitud y acabados premium, integrando iluminación y acero sin comprometer la estética.',
+      'Recrearon nuestro diseño de pérgola corporativa con ingeniería precisa y acabados premium; integraron acero y cristal manteniendo la estética que exigía el cliente.',
   },
   {
     name: 'Julián Pérez',
     role: 'Coordinador de mantenimiento · Parque Industrial Nova',
     image: 'https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?auto=format&fit=facearea&w=160&h=160&q=80',
     quote:
-      'Su plan de saneamiento y pintura industrial detuvo la corrosión y dejó nuestras líneas de producción operando con total seguridad.',
+      'Su plan de refuerzo y pintura industrial detuvo la corrosión en nuestras naves; entregaron cada estructura metálica lista para operar sin detener la producción.',
   },
   {
-    name: 'Andrea Gómez',
-    role: 'Propietaria · Residencial Mirador',
-    image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=facearea&w=160&h=160&q=80',
+    name: 'Carlos Mendes',
+    role: 'Director técnico · Inmobiliaria Terracota',
+    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=facearea&w=160&h=160&q=80',
     quote:
-      'La escalera metálica a medida quedó sólida y elegante; respetaron cada detalle del proyecto y entregaron antes de lo pactado.',
+      'Aportaron cálculos estructurales, memoria de materiales y montaje certificado; la obra metálica quedó lista en el cronograma comprometido y dentro de normas.',
   },
 ]
 
