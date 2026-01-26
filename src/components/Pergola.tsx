@@ -34,5 +34,6 @@ export default function Pergola() {
         </div>
       </div>
     </section>
-  )
+  );
 }
+      </section>

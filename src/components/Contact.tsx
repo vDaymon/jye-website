@@ -60,7 +60,7 @@ export default function Contact() {
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/imgs/whatsapp.png" alt="WhatsApp" className="h-5 w-5" />
+              <img src="/imgs/logos/whatsapp.png" alt="WhatsApp" className="h-5 w-5" />
               WhatsApp
             </a>
           </AnimateIn>

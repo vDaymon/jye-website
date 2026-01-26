@@ -8,9 +8,14 @@ const handleScrollToServices = () => {
 export default function Hero() {
   return (
     <section id="hero" className="relative isolate h-[75vh] overflow-hidden -mt-[68px] mx-6 rounded-2xl">
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/imgs/Fachada en CRISTA.jpeg')" }}
+      <video
+        className="absolute inset-0 z-0 w-full h-full object-cover"
+        src="/webm/hero.webm"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
       />
       <div className="absolute inset-0 z-0 bg-black/60" />
 
@@ -47,11 +52,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <div className="pointer-events-none absolute inset-x-0 bottom-[-50px] z-20 flex items-center justify-between">
-        <span className="absolute left-0 right-0 top-1/3 h-8 -translate-y-1/2 bg-white"></span>
-        <span className="hero-slide-left relative z-10 -ml-8 h-[110px] w-[220px] rounded-full bg-white shadow-lg shadow-black/10 sm:-ml-16 sm:h-[150px] sm:w-[280px]"></span>
-        <span className="hero-slide-right relative z-10 -mr-8 h-[110px] w-[220px] rounded-full bg-white shadow-lg shadow-black/10 sm:-mr-16 sm:h-[150px] sm:w-[280px]"></span>
-      </div>
+      {/* Eliminados los rectángulos decorativos de los lados */}
     </section>
   )
 }

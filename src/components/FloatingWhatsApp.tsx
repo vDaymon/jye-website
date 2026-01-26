@@ -11,7 +11,7 @@ export default function FloatingWhatsApp() {
       aria-label="WhatsApp"
       title="WhatsApp"
     >
-      <img src="/imgs/whatsapp.png" alt="WhatsApp" className="h-10 w-10 sm:h-8 sm:w-8" />
+      <img src="/imgs/logos/whatsapp.png" alt="WhatsApp" className="h-10 w-10 sm:h-8 sm:w-8" />
     </a>
   )
 }

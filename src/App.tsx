@@ -6,7 +6,7 @@ import Projects from './components/Projects'
 import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import Pergola from './components/Pergola'
+import Gallery from './components/Gallery'
 import FloatingWhatsApp from './components/FloatingWhatsApp'
 import Faq from './components/Faq'
 
@@ -18,7 +18,7 @@ export default function App() {
       <main className="flex flex-col gap-20 pt-24 lg:pt-28">
         <Hero />
         <Services />
-        <Pergola />
+        <Gallery />
         <Projects />
         <Faq />
         <Testimonials />

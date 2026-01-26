@@ -64,10 +64,18 @@ export default function Projects() {
   }
 
   return (
-    <section id="projects" className="px-6">
-      <div className="mx-auto max-w-6xl">
+    <section id="projects" className="relative px-6 bg-[#4a7c57] py-16 overflow-hidden">
+      {/* Logos decorativos solo sobre el fondo */}
+      <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 1 }} aria-hidden="true">
+        <img src="/imgs/logos/logo.png" alt="logo decorativo" style={{ position: 'absolute', top: '5%', left: '8%', width: 90 }} />
+        <img src="/imgs/logos/logo.png" alt="logo decorativo" style={{ position: 'absolute', top: '60%', left: '15%', width: 140 }} />
+        <img src="/imgs/logos/logo.png" alt="logo decorativo" style={{ position: 'absolute', top: '20%', right: '10%', width: 120 }} />
+        <img src="/imgs/logos/logo.png" alt="logo decorativo" style={{ position: 'absolute', bottom: '8%', left: '40%', width: 70 }} />
+        <img src="/imgs/logos/logo.png" alt="logo decorativo" style={{ position: 'absolute', bottom: '12%', right: '18%', width: 110 }} />
+      </div>
+      <div className="relative mx-auto max-w-6xl" style={{ zIndex: 2 }}>
         <AnimateIn>
-          <h2 className="text-center text-3xl font-bold text-slate-900">Proyectos destacados</h2>
+          <h2 className="text-center text-3xl font-bold text-white">Proyectos destacados</h2>
         </AnimateIn>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((p, i) => (
@@ -77,7 +85,7 @@ export default function Projects() {
               delay={i * 0.05}
             >
               <motion.article
-                className="flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-[0_28px_72px_-36px_rgba(15,23,42,0.5)] transition duration-300 hover:-translate-y-2 hover:shadow-[0_36px_96px_-32px_rgba(15,23,42,0.6)]"
+                className="flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl border border-white/20 bg-white/90 shadow-[0_28px_72px_-36px_rgba(15,23,42,0.5)] transition duration-300 hover:-translate-y-2 hover:shadow-[0_36px_96px_-32px_rgba(15,23,42,0.6)]"
                 whileHover={{ scale: 1.01 }}
                 onClick={() => openProject(p.id)}
               >
@@ -90,25 +98,25 @@ export default function Projects() {
                   />
                 </div>
                 <div className="space-y-2 p-5">
-                  <h3 className="text-xl font-semibold text-slate-900">{p.title}</h3>
-                  <p className="text-sm text-slate-600">{p.desc}</p>
+                  <h3 className="text-xl font-semibold text-[#2c6334]">{p.title}</h3>
+                  <p className="text-sm text-slate-700">{p.desc}</p>
                 </div>
               </motion.article>
             </AnimateIn>
           ))}
         </div>
 
-        <div className="mt-12 rounded-3xl border border-slate-200 bg-slate-50 p-6 text-center text-slate-700">
-          <h3 className="text-2xl font-semibold text-slate-900">Planifiquemos su proximo proyecto en acero</h3>
+        <div className="mt-12 rounded-3xl border border-white/20 bg-white/10 p-6 text-center text-white">
+          <h3 className="text-2xl font-semibold text-white">Planifiquemos su proximo proyecto en acero</h3>
           <p className="mt-2 text-sm leading-6">
             Enviamos memorias de calculo, cronogramas de montaje y presupuestos ajustados para parques industriales, sedes corporativas y constructoras.
             Conecte con nuestro equipo para cotizar estructuras metalicas a la medida.
           </p>
           <a
-            className="mt-4 inline-flex items-center rounded-xl bg-[#2c6334] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#2c6334]/30 transition hover:bg-[#254f2a]"
+            className="mt-4 inline-flex items-center rounded-xl bg-white/90 px-6 py-3 text-sm font-semibold text-[#2c6334] shadow-lg shadow-white/30 transition hover:bg-white"
             href="#contact"
           >
-            Hablar con ingenieria comercial
+            Hablar con ingeniería comercial
           </a>
         </div>
 

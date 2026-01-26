@@ -26,7 +26,7 @@ export default function Navbar() {
           aria-label="Ir al inicio"
           onClick={() => scrollToSection('hero')}
         >
-          <img src="/imgs/logo.png" alt="Estructuras Metálicas J y E" className="h-12 w-auto" />
+          <img src="/imgs/logos/logo.png" alt="Estructuras Metálicas J y E" className="h-12 w-auto" />
         </button>
 
         <ul className="hidden items-center gap-2 lg:flex">
@@ -36,7 +36,7 @@ export default function Navbar() {
                 className={`rounded-lg px-4 py-2 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2c6334] ${
                   item.id === 'contact'
                     ? 'bg-[#2c6334] text-white hover:bg-[#254f2a]'
-                    : 'text-slate-500 hover:bg-slate-100 hover:text-slate-900'
+                    : 'text-gray-500 hover:bg-slate-100 hover:text-gray-900'
                 }`}
                 onClick={() => scrollToSection(item.id)}
               >
@@ -95,7 +95,7 @@ export default function Navbar() {
                   className={`w-full rounded-lg px-4 py-2 text-left text-base font-semibold transition ${
                     item.id === 'contact'
                       ? 'bg-[#2c6334] text-white hover:bg-[#254f2a]'
-                      : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                      : 'text-gray-600 hover:bg-slate-100 hover:text-gray-900'
                   }`}
                   onClick={() => scrollToSection(item.id)}
                   initial={{ opacity: 0, y: 30 }}
