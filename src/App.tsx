@@ -3,12 +3,15 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Services from './components/Services'
 import Projects from './components/Projects'
+import GalleryTab from './components/GalleryTab'
 import Testimonials from './components/Testimonials'
+import LogosCarousel from './components/LogosCarousel'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import Gallery from './components/Gallery'
 import FloatingWhatsApp from './components/FloatingWhatsApp'
 import Faq from './components/Faq'
+
+
 
 export default function App() {
   return (
@@ -18,8 +21,10 @@ export default function App() {
       <main className="flex flex-col gap-20 pt-24 lg:pt-28">
         <Hero />
         <Services />
-        <Gallery />
+        <GalleryTab />
+        <LogosCarousel />
         <Projects />
+        
         <Faq />
         <Testimonials />
         <Contact />

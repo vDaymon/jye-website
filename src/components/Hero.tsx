@@ -7,7 +7,7 @@ const handleScrollToServices = () => {
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative isolate h-[75vh] overflow-hidden -mt-[68px] mx-6 rounded-2xl">
+    <section id="hero" className="relative isolate h-[75vh] overflow-hidden -mt-[68px] w-full">
       <video
         className="absolute inset-0 z-0 w-full h-full object-cover"
         src="/webm/hero.webm"

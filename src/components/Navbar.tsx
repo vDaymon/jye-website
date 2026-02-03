@@ -46,18 +46,31 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden items-center gap-3 text-slate-500 lg:flex">
+        <div className="hidden items-center gap-5 text-slate-500 lg:flex">
           <a href="https://www.instagram.com/estructurasmetalicasjye/" target="_blank" rel="noreferrer" aria-label="Instagram" title="Instagram">
-            <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 .001 5.001A2.5 2.5 0 0 0 12 7.5zM18.7 6.3a1 1 0 1 1-1.4 1.4 1 1 0 0 1 1.4-1.4z"/></svg>
+            <svg className="h-8 w-8" viewBox="0 0 24 24" aria-hidden="true">
+              <defs>
+                <linearGradient id="ig-gradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stopColor="#f58529" />
+                  <stop offset="50%" stopColor="#dd2a7b" />
+                  <stop offset="100%" stopColor="#8134af" />
+                </linearGradient>
+              </defs>
+              <path fill="url(#ig-gradient)" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 .001 5.001A2.5 2.5 0 0 0 12 7.5zM18.7 6.3a1 1 0 1 1-1.4 1.4 1 1 0 0 1 1.4-1.4z"/>
+            </svg>
           </a>
 
           <a href="https://www.facebook.com/EstructurasMetalicasJyE" target="_blank" rel="noreferrer" aria-label="Facebook" title="Facebook">
-            <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2.2v-2.9h2.2V9.2c0-2.2 1.3-3.4 3.3-3.4.96 0 1.97.17 1.97.17v2.2h-1.12c-1.1 0-1.45.69-1.45 1.4v1.67h2.47l-.39 2.9h-2.08v7A10 10 0 0 0 22 12z"/></svg>
+            <svg className="h-8 w-8" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#1877f3" d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2.2v-2.9h2.2V9.2c0-2.2 1.3-3.4 3.3-3.4.96 0 1.97.17 1.97.17v2.2h-1.12c-1.1 0-1.45.69-1.45 1.4v1.67h2.47l-.39 2.9h-2.08v7A10 10 0 0 0 22 12z"/>
+            </svg>
           </a>
 
           <a href="mailto:estructurasmetalicasje@gmail.com" aria-label="Email" title="Email">
-            <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.5l-8 5-8-5V6h16zM4 18V8.5l7.5 4.69c.2.12.45.12.65 0L20 8.5V18H4z"/></svg>
-          </a> 
+            <svg className="h-8 w-8" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#22c55e" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2v.5l-8 5-8-5V6h16zM4 18V8.5l7.5 4.69c.2.12.45.12.65 0L20 8.5V18H4z"/>
+            </svg>
+          </a>
         </div>
 
         <button

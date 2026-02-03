@@ -1,0 +1,21 @@
+/* Carrusel de logos para aliados */
+.logo-carousel {
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  padding: 1rem 0;
+}
+.logo-carousel-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  min-width: 100%;
+  scroll-behavior: auto;
+}
+.logo-carousel-track img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  user-drag: none;
+  user-select: none;
+}

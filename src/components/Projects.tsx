@@ -65,13 +65,13 @@ export default function Projects() {
 
   return (
     <section id="projects" className="relative px-6 bg-[#4a7c57] py-16 overflow-hidden">
-      {/* Logos decorativos solo sobre el fondo */}
+      {/* Logos decorativos solo sobre el fondo, ahora más grandes y rotados */}
       <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 1 }} aria-hidden="true">
-        <img src="/imgs/logos/logo.png" alt="logo decorativo" style={{ position: 'absolute', top: '5%', left: '8%', width: 90 }} />
-        <img src="/imgs/logos/logo.png" alt="logo decorativo" style={{ position: 'absolute', top: '60%', left: '15%', width: 140 }} />
-        <img src="/imgs/logos/logo.png" alt="logo decorativo" style={{ position: 'absolute', top: '20%', right: '10%', width: 120 }} />
-        <img src="/imgs/logos/logo.png" alt="logo decorativo" style={{ position: 'absolute', bottom: '8%', left: '40%', width: 70 }} />
-        <img src="/imgs/logos/logo.png" alt="logo decorativo" style={{ position: 'absolute', bottom: '12%', right: '18%', width: 110 }} />
+        <img src="/imgs/logos/logo.png" alt="logo decorativo" style={{ position: 'absolute', top: '2%', left: '5%', width: 180, transform: 'rotate(-15deg)' }} />
+        <img src="/imgs/logos/logo.png" alt="logo decorativo" style={{ position: 'absolute', top: '55%', left: '12%', width: 220, transform: 'rotate(20deg)' }} />
+        <img src="/imgs/logos/logo.png" alt="logo decorativo" style={{ position: 'absolute', top: '18%', right: '8%', width: 200, transform: 'rotate(-30deg)' }} />
+        <img src="/imgs/logos/logo.png" alt="logo decorativo" style={{ position: 'absolute', bottom: '6%', left: '38%', width: 150, transform: 'rotate(12deg)' }} />
+        <img src="/imgs/logos/logo.png" alt="logo decorativo" style={{ position: 'absolute', bottom: '10%', right: '15%', width: 210, transform: 'rotate(-22deg)' }} />
       </div>
       <div className="relative mx-auto max-w-6xl" style={{ zIndex: 2 }}>
         <AnimateIn>
@@ -85,7 +85,7 @@ export default function Projects() {
               delay={i * 0.05}
             >
               <motion.article
-                className="flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl border border-white/20 bg-white/90 shadow-[0_28px_72px_-36px_rgba(15,23,42,0.5)] transition duration-300 hover:-translate-y-2 hover:shadow-[0_36px_96px_-32px_rgba(15,23,42,0.6)]"
+                className="flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl bg-white/90 shadow-[0_28px_72px_-36px_rgba(15,23,42,0.5)] transition duration-300 hover:-translate-y-2 hover:shadow-[0_36px_96px_-32px_rgba(15,23,42,0.6)]"
                 whileHover={{ scale: 1.01 }}
                 onClick={() => openProject(p.id)}
               >
