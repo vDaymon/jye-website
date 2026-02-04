@@ -1,5 +1,8 @@
+'use client'
+
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 import AnimateIn from './AnimateIn'
 
 const pergolaFolder = '/imgs/pergola del retiro'
@@ -67,11 +70,11 @@ export default function Projects() {
     <section id="projects" className="relative px-6 bg-[#4a7c57] py-16 overflow-hidden">
       {/* Logos decorativos solo sobre el fondo, ahora más grandes y rotados */}
       <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 1 }} aria-hidden="true">
-        <img src="/imgs/logos/logo.png" alt="logo decorativo" style={{ position: 'absolute', top: '2%', left: '5%', width: 180, transform: 'rotate(-15deg)' }} />
-        <img src="/imgs/logos/logo.png" alt="logo decorativo" style={{ position: 'absolute', top: '55%', left: '12%', width: 220, transform: 'rotate(20deg)' }} />
-        <img src="/imgs/logos/logo.png" alt="logo decorativo" style={{ position: 'absolute', top: '18%', right: '8%', width: 200, transform: 'rotate(-30deg)' }} />
-        <img src="/imgs/logos/logo.png" alt="logo decorativo" style={{ position: 'absolute', bottom: '6%', left: '38%', width: 150, transform: 'rotate(12deg)' }} />
-        <img src="/imgs/logos/logo.png" alt="logo decorativo" style={{ position: 'absolute', bottom: '10%', right: '15%', width: 210, transform: 'rotate(-22deg)' }} />
+        <Image src="/imgs/logos/logo.png" alt="logo decorativo" width={180} height={180} style={{ position: 'absolute', top: '2%', left: '5%', width: 180, transform: 'rotate(-15deg)' }} />
+        <Image src="/imgs/logos/logo.png" alt="logo decorativo" width={220} height={220} style={{ position: 'absolute', top: '55%', left: '12%', width: 220, transform: 'rotate(20deg)' }} />
+        <Image src="/imgs/logos/logo.png" alt="logo decorativo" width={200} height={200} style={{ position: 'absolute', top: '18%', right: '8%', width: 200, transform: 'rotate(-30deg)' }} />
+        <Image src="/imgs/logos/logo.png" alt="logo decorativo" width={150} height={150} style={{ position: 'absolute', bottom: '6%', left: '38%', width: 150, transform: 'rotate(12deg)' }} />
+        <Image src="/imgs/logos/logo.png" alt="logo decorativo" width={210} height={210} style={{ position: 'absolute', bottom: '10%', right: '15%', width: 210, transform: 'rotate(-22deg)' }} />
       </div>
       <div className="relative mx-auto max-w-6xl" style={{ zIndex: 2 }}>
         <AnimateIn>
@@ -90,11 +93,12 @@ export default function Projects() {
                 onClick={() => openProject(p.id)}
               >
                 <div className="relative h-40 w-full overflow-hidden">
-                  <img
+                  <Image
                     src={p.images[0]}
                     alt={`Vista previa del proyecto ${p.title}`}
-                    className="h-full w-full object-cover"
-                    loading="lazy"
+                    fill
+                    sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"
+                    className="object-cover"
                   />
                 </div>
                 <div className="space-y-2 p-5">
@@ -154,12 +158,15 @@ export default function Projects() {
                   ×
                 </button>
                 <div className="relative flex max-h-[70vh] w-full items-center justify-center bg-slate-900/10">
-                  <img
-                    src={sel.images[slideIndex]}
-                    alt={`Imagen ${slideIndex + 1} del proyecto ${sel.title}`}
-                    className="max-h-[70vh] w-full object-contain"
-                    loading="lazy"
-                  />
+                  <div className="relative h-full w-full" style={{ minHeight: '320px' }}>
+                    <Image
+                      src={sel.images[slideIndex]}
+                      alt={`Imagen ${slideIndex + 1} del proyecto ${sel.title}`}
+                      fill
+                      sizes="90vw"
+                      className="object-contain"
+                    />
+                  </div>
                   <button
                     className="absolute left-4 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-black/60 text-xl text-white shadow-lg shadow-black/40 backdrop-blur-sm transition hover:bg-black/80"
                     type="button"

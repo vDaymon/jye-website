@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function FloatingWhatsApp() {
   const phone = '+57 310 8210408'
   const whatsappLink = `https://wa.me/${phone.replace(/\D/g, '')}`
@@ -11,7 +13,7 @@ export default function FloatingWhatsApp() {
       aria-label="WhatsApp"
       title="WhatsApp"
     >
-      <img src="/imgs/logos/whatsapp.png" alt="WhatsApp" className="h-10 w-10 sm:h-8 sm:w-8" />
+      <Image src="/imgs/logos/whatsapp.png" alt="WhatsApp" width={80} height={80} className="h-10 w-10 sm:h-8 sm:w-8" priority={false} />
     </a>
   )
 }

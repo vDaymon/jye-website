@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import AnimateIn from './AnimateIn'
 
 export default function Contact() {
@@ -60,7 +61,7 @@ export default function Contact() {
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/imgs/logos/whatsapp.png" alt="WhatsApp" className="h-5 w-5" />
+              <Image src="/imgs/logos/whatsapp.png" alt="WhatsApp" width={40} height={40} className="h-5 w-5" />
               WhatsApp
             </a>
           </AnimateIn>
@@ -71,7 +72,7 @@ export default function Contact() {
           <iframe
             title="Mapa - Estructuras Metálicas J y E"
             src={mapsSrc}
-            className="h-[360px] w-full"
+            className="h-[720px] w-full"
             loading="lazy"
           />
         </div>

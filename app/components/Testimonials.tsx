@@ -1,5 +1,8 @@
+'use client'
+
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import Image from 'next/image'
 import AnimateIn from './AnimateIn'
 
 const testimonials = [
@@ -68,11 +71,13 @@ export default function Testimonials() {
                     key={testimonial.name}
                     className="w-full max-w-sm flex-1 rounded-3xl border border-slate-100 bg-white p-8 text-center shadow-[0_32px_88px_-36px_rgba(15,23,42,0.5)]"
                   >
-                    <img
+                    <Image
                       src={testimonial.image}
                       alt={`Retrato de ${testimonial.name}`}
+                      width={160}
+                      height={160}
                       className="mx-auto h-20 w-20 rounded-full object-cover shadow-[0_12px_32px_-12px_rgba(15,23,42,0.65)]"
-                      loading="lazy"
+                      priority={false}
                     />
                     <p className="mt-5 text-left text-sm leading-6 italic text-slate-700">“{testimonial.quote}”</p>
                     <figcaption className="mt-5 flex flex-col items-center gap-1">

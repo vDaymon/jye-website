@@ -1,14 +1,19 @@
+import Image from 'next/image'
+
 export default function Pergola() {
   return (
     <section aria-labelledby="case-study" className="px-6">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 lg:flex-row lg:items-center">
         <div className="group relative w-full overflow-hidden rounded-[3rem] border border-white/40 shadow-[0_40px_120px_-40px_rgba(15,23,42,0.65)] lg:w-3/5">
-          <img
-            src="/imgs/pergola del retiro/PergolaenelRetiro.jpeg"
-            alt="Pérgola metálica instalada en terraza residencial en El Retiro"
-            className="h-[320px] w-full transform-gpu object-cover transition-transform duration-700 [transform:scale(1)] group-hover:[transform:scale(1.05)] sm:h-[420px]"
-            loading="lazy"
-          />
+          <div className="relative h-[320px] w-full sm:h-[420px]">
+            <Image
+              src="/imgs/pergola del retiro/PergolaenelRetiro.jpeg"
+              alt="Pérgola metálica instalada en terraza residencial en El Retiro"
+              fill
+              className="transform-gpu object-cover transition-transform duration-700 [transform:scale(1)] group-hover:[transform:scale(1.05)]"
+              sizes="(min-width:1024px) 50vw, 100vw"
+            />
+          </div>
           <div className="pointer-events-none absolute inset-6 rounded-[3rem] border border-white/20 opacity-0 transition duration-700 group-hover:opacity-100 group-hover:[filter:blur(2px)]" />
         </div>
         <div className="flex flex-1 flex-col gap-4 text-slate-700">

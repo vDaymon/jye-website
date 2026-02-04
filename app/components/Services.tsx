@@ -1,4 +1,7 @@
+'use client'
+
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import AnimateIn from './AnimateIn'
 
 const services = [
@@ -91,12 +94,16 @@ export default function Services() {
             >
               <motion.div whileHover={{ y: -4 }} className="flex h-full flex-col gap-6 overflow-hidden rounded-2xl lg:flex-row lg:items-stretch">
                 <div className="lg:w-2/5">
-                  <img
-                    src={s.image}
-                    alt={s.alt}
-                    loading="lazy"
-                    className="h-56 w-full object-cover transition duration-500 hover:scale-105 lg:h-full"
-                  />
+                  <div className="relative h-56 w-full overflow-hidden rounded-2xl lg:h-full">
+                    <Image
+                      src={s.image}
+                      alt={s.alt}
+                      fill
+                      sizes="(min-width:1024px) 40vw, 100vw"
+                      className="h-full w-full object-cover transition duration-500 hover:scale-105"
+                      priority={false}
+                    />
+                  </div>
                 </div>
                 <div className="flex flex-1 flex-col justify-center gap-4 lg:w-3/5">
                   <h3 className="text-2xl font-semibold text-[#0b2915]">{s.title}</h3>

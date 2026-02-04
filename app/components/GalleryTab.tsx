@@ -1,4 +1,7 @@
+'use client'
+
 import React, { useState, useRef, useLayoutEffect } from "react";
+import Image from "next/image";
 
 const data = [
     {
@@ -176,11 +179,16 @@ export default function GalleryTab() {
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {current?.images.map(({ imageLink }, idx) => (
           <div key={idx} className="w-full">
-            <img
-              src={imageLink}
-              alt="gallery-img"
-              className="h-40 w-full object-cover rounded-lg shadow"
-            />
+            <div className="relative h-40 w-full overflow-hidden rounded-lg shadow">
+              <Image
+                src={imageLink}
+                alt="gallery-img"
+                fill
+                sizes="(max-width: 768px) 50vw, 33vw"
+                className="object-cover"
+                priority={false}
+              />
+            </div>
           </div>
         ))}
       </div>

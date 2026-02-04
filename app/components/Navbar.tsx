@@ -1,5 +1,8 @@
+'use client'
+
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 
 const navItems = [
   { id: 'hero', label: 'Inicio' },
@@ -26,7 +29,15 @@ export default function Navbar() {
           aria-label="Ir al inicio"
           onClick={() => scrollToSection('hero')}
         >
-          <img src="/imgs/logos/logo.png" alt="Estructuras Metálicas J y E" className="h-12 w-auto" />
+          <Image
+            src="/imgs/logos/logo.png"
+            alt="Estructuras Metálicas J y E"
+            width={200}
+            height={80}
+            className="max-h-10 sm:max-h-12 h-auto w-auto"
+            style={{ height: 'auto', maxHeight: '2.5rem' }}
+            priority
+          />
         </button>
 
         <ul className="hidden items-center gap-2 lg:flex">
