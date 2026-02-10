@@ -8,45 +8,37 @@ const data = [
   { label: "Casas", value: "casas" },
   { label: "Construcción", value: "construccion" },
   { label: "Pasamanos", value: "pasamanos" },
-];
+] as const;
 
-function getImages(tab) {
-  // Map tab value to folder name
-  const folderMap = {
-    pergolas: "pergolas",
-    casas: "casas",
-    construccion: "construccion",
-    pasamanos: "pasamanos",
-  };
-  const folder = folderMap[tab];
-  if (!folder) return [];
-  // Images are in public/imgs/gallery/<folder>
-  // List of images for each folder (hardcoded for now, could be generated)
-  const images = {
-    pergolas: [
-      "Pérgola en el Retiro 3.jpeg",
-      "Pérgola en el Retiro.jpeg",
-      "WhatsApp Image 2025-06-17 at 2.08.28 PM (1).jpeg",
-    ],
-    casas: [
-      "evidencia 1.jpg",
-    ],
-    construccion: [
-      "CRISTA.jpeg",
-      "EVIDENCIA DE TRABAJO 2.jpeg",
-      "Fachada en CRISTA.jpeg",
-      "evidencia 2.jpeg",
-    ],
-    pasamanos: [
-      "Pasamanos vehiculares.jpeg",
-      "PasamanosenviaSan Luis.jpeg",
-    ],
-  };
-  return images[folder]?.map((img) => `/imgs/gallery/${folder}/${img}`) || [];
+type GalleryTabValue = (typeof data)[number]["value"];
+
+const imageCatalog: Record<GalleryTabValue, string[]> = {
+  pergolas: [
+    "Pérgola en el Retiro 3.jpeg",
+    "Pérgola en el Retiro.jpeg",
+    "WhatsApp Image 2025-06-17 at 2.08.28 PM (1).jpeg",
+  ],
+  casas: [
+    "evidencia 1.jpg",
+  ],
+  construccion: [
+    "CRISTA.jpeg",
+    "EVIDENCIA DE TRABAJO 2.jpeg",
+    "Fachada en CRISTA.jpeg",
+    "evidencia 2.jpeg",
+  ],
+  pasamanos: [
+    "Pasamanos vehiculares.jpeg",
+    "PasamanosenviaSan Luis.jpeg",
+  ],
+};
+
+function getImages(tab: GalleryTabValue): string[] {
+  return imageCatalog[tab]?.map((img) => `/imgs/gallery/${tab}/${img}`) || [];
 }
 
 export default function GalleryTab() {
-  const [selected, setSelected] = useState(data[0].value);
+  const [selected, setSelected] = useState<GalleryTabValue>(data[0].value);
   const current = data.find((cat) => cat.value === selected);
   const images = getImages(selected);
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
