@@ -7,25 +7,18 @@ import AnimateIn from './AnimateIn'
 
 const testimonials = [
   {
-    name: 'Laura Castillo',
-    role: 'Arquitecta líder · Estudio Forma',
-    image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=facearea&w=160&h=160&q=80',
+    name: 'Arquitecto Leandro Herrera',
+    role: '',
+    image: '',
     quote:
-      'Recrearon nuestro diseño de pérgola corporativa con ingeniería precisa y acabados premium; integraron acero y cristal manteniendo la estética que exigía el cliente.',
+      'Como arquitecto busco aliados que se acomoden a las necesidades de cada uno de nuestros proyectos, con estructuras JE he tenido un aliado importante que ha sabido llevar la voluntad mía y de los clientes a otro nivel',
   },
   {
-    name: 'Julián Pérez',
-    role: 'Coordinador de mantenimiento · Parque Industrial Nova',
-    image: 'https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?auto=format&fit=facearea&w=160&h=160&q=80',
+    name: 'Ingeniera Alejandra Restrepo',
+    role: '',
+    image: '',
     quote:
-      'Su plan de refuerzo y pintura industrial detuvo la corrosión en nuestras naves; entregaron cada estructura metálica lista para operar sin detener la producción.',
-  },
-  {
-    name: 'Carlos Mendes',
-    role: 'Director técnico · Inmobiliaria Terracota',
-    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=facearea&w=160&h=160&q=80',
-    quote:
-      'Aportaron cálculos estructurales, memoria de materiales y montaje certificado; la obra metálica quedó lista en el cronograma comprometido y dentro de normas.',
+      'Recomiendo a la empresa  estructuras metálicas JyE s.a.s por su cumplimiento, calidad y profesionalismo, no solo realizan un trabajo, brindan asesoría técnica y económica, su personal es capacitado tanto técnicamente con en alturas y una de las cosas más importantes en este sector es que cumplen con los plazos establecidos.',
   },
 ]
 
@@ -71,18 +64,30 @@ export default function Testimonials() {
                     key={testimonial.name}
                     className="w-full max-w-sm flex-1 rounded-3xl border border-slate-100 bg-white p-8 text-center shadow-[0_32px_88px_-36px_rgba(15,23,42,0.5)]"
                   >
-                    <Image
-                      src={testimonial.image}
-                      alt={`Retrato de ${testimonial.name}`}
-                      width={160}
-                      height={160}
-                      className="mx-auto h-20 w-20 rounded-full object-cover shadow-[0_12px_32px_-12px_rgba(15,23,42,0.65)]"
-                      priority={false}
-                    />
+                    {testimonial.image ? (
+                      <Image
+                        src={testimonial.image}
+                        alt={`Retrato de ${testimonial.name}`}
+                        width={160}
+                        height={160}
+                        className="mx-auto h-20 w-20 rounded-full object-cover shadow-[0_12px_32px_-12px_rgba(15,23,42,0.65)]"
+                        priority={false}
+                      />
+                    ) : (
+                      <div className="mx-auto h-20 w-20 rounded-full bg-slate-200 flex items-center justify-center text-slate-400 text-4xl">
+                        <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6.75a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 19.5a7.5 7.5 0 0115 0v.75a.75.75 0 01-.75.75h-13.5a.75.75 0 01-.75-.75v-.75z" />
+                          </svg>
+                        </span>
+                      </div>
+                    )}
                     <p className="mt-5 text-left text-sm leading-6 italic text-slate-700">“{testimonial.quote}”</p>
                     <figcaption className="mt-5 flex flex-col items-center gap-1">
                       <span className="text-base font-semibold text-slate-900">{testimonial.name}</span>
-                      <span className="text-[0.65rem] uppercase tracking-wide text-[#2c6334]">{testimonial.role}</span>
+                      {testimonial.role && (
+                        <span className="text-[0.65rem] uppercase tracking-wide text-[#2c6334]">{testimonial.role}</span>
+                      )}
                     </figcaption>
                   </figure>
                 ))}

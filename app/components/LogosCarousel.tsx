@@ -15,12 +15,12 @@ export default function LogosCarousel() {
   return (
     <div>
       <h2 className="text-4xl font-extrabold text-center pb-28">Nuestros aliados</h2>
-      <div style={{ height: '60px', position: 'relative', overflow: 'hidden' }}>
+      <div style={{ height: '80px', position: 'relative', overflow: 'hidden' }}>
         <LogoLoop
           logos={imageLogos}
           speed={100}
           direction="left"
-          logoHeight={40}
+          logoHeight={60}
           gap={40}
           scaleOnHover
           fadeOut

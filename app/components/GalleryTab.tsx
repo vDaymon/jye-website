@@ -1,135 +1,54 @@
 'use client'
 
-import React, { useState, useRef, useLayoutEffect } from "react";
+import { useState, useRef, useLayoutEffect } from "react";
 import Image from "next/image";
 
 const data = [
-    {
-      label: "Pérgolas",
-      value: "pergolas",
-      images: [
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
-        },
-        {
-          imageLink:
-            "https://demos.creative-tim.com/material-kit-pro/assets/img/examples/blog5.jpg",
-        },
-        {
-          imageLink:
-            "https://material-taillwind-pro-ct-tailwind-team.vercel.app/img/content2.jpg",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1620064916958-605375619af8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1493&q=80",
-        },
-      ],
-    },
-    {
-      label: "Casas",
-      value: "Casas",
-      images: [
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1432462770865-65b70566d673?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
-        },
-      ],
-    },
-    {
-      label: "Construcción",
-      value: "construccion",
-      images: [
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
-        },
-        {
-          imageLink:
-            "https://demos.creative-tim.com/material-kit-pro/assets/img/examples/blog5.jpg",
-        },
-        {
-          imageLink:
-            "https://material-taillwind-pro-ct-tailwind-team.vercel.app/img/content2.jpg",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1620064916958-605375619af8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1493&q=80",
-        },
-      ],
-    },
-    {
-      label: "Pasamanos",
-      value: "pasamanos",
-      images: [
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1432462770865-65b70566d673?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
-        },
-        {
-          imageLink:
-            "https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
-        },
-      ],
-    },
-    
-  ];
+  { label: "Pérgolas", value: "pergolas" },
+  { label: "Casas", value: "casas" },
+  { label: "Construcción", value: "construccion" },
+  { label: "Pasamanos", value: "pasamanos" },
+];
+
+function getImages(tab) {
+  // Map tab value to folder name
+  const folderMap = {
+    pergolas: "pergolas",
+    casas: "casas",
+    construccion: "construccion",
+    pasamanos: "pasamanos",
+  };
+  const folder = folderMap[tab];
+  if (!folder) return [];
+  // Images are in public/imgs/gallery/<folder>
+  // List of images for each folder (hardcoded for now, could be generated)
+  const images = {
+    pergolas: [
+      "Pérgola en el Retiro 3.jpeg",
+      "Pérgola en el Retiro.jpeg",
+      "WhatsApp Image 2025-06-17 at 2.08.28 PM (1).jpeg",
+    ],
+    casas: [
+      "evidencia 1.jpg",
+    ],
+    construccion: [
+      "CRISTA.jpeg",
+      "EVIDENCIA DE TRABAJO 2.jpeg",
+      "Fachada en CRISTA.jpeg",
+      "evidencia 2.jpeg",
+    ],
+    pasamanos: [
+      "Pasamanos vehiculares.jpeg",
+      "PasamanosenviaSan Luis.jpeg",
+    ],
+  };
+  return images[folder]?.map((img) => `/imgs/gallery/${folder}/${img}`) || [];
+}
 
 export default function GalleryTab() {
   const [selected, setSelected] = useState(data[0].value);
   const current = data.find((cat) => cat.value === selected);
+  const images = getImages(selected);
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const indicatorRef = useRef<HTMLDivElement>(null);
   const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 });
@@ -146,38 +65,62 @@ export default function GalleryTab() {
   }, [selected]);
 
   return (
-    <div className="w-full max-w-4xl mx-auto">
-      <div className="relative flex justify-center mb-6 border-b pb-2">
-        <div className="flex space-x-2 relative" style={{ minHeight: 40 }}>
-          {data.map(({ label, value }, idx) => (
+    <div className="w-full max-w-4xl mx-auto px-4 md:px-0">
+      <div className="mb-6 space-y-4">
+        <div className="grid grid-cols-2 gap-3 md:hidden">
+          {data.map(({ label, value }) => (
             <button
-              key={value}
-              ref={el => { tabRefs.current[idx] = el; }}
-              className={`relative px-4 py-2 font-semibold transition-colors duration-200 focus:outline-none bg-transparent ${
+              key={`${value}-mobile`}
+              className={`rounded-xl border px-3 py-2 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2c6334] ${
                 selected === value
-                  ? "text-green-700"
-                  : "text-gray-700 hover:text-green-700"
+                  ? 'border-[#2c6334] bg-[#2c6334]/10 text-[#2c6334]'
+                  : 'border-slate-200 text-slate-600 hover:border-[#2c6334]/40 hover:text-[#2c6334]'
               }`}
               onClick={() => setSelected(value)}
-              style={{ zIndex: 1 }}
             >
               {label}
             </button>
           ))}
-          {/* Animated indicator */}
+        </div>
+
+        <div className="relative hidden border-b pb-2 md:block">
           <div
-            ref={indicatorRef}
-            className="absolute bottom-0 h-1 bg-green-700 rounded transition-all duration-300"
-            style={{
-              left: indicatorStyle.left,
-              width: indicatorStyle.width,
-              zIndex: 0,
-            }}
-          />
+            className="relative overflow-x-auto"
+            style={{ WebkitOverflowScrolling: 'touch' }}
+          >
+            <div className="relative inline-flex min-w-max items-center gap-2 px-1" style={{ minHeight: 40 }}>
+              {data.map(({ label, value }, idx) => (
+                <button
+                  key={value}
+                  ref={(el) => {
+                    tabRefs.current[idx] = el;
+                  }}
+                  className={`relative px-4 py-2 text-sm font-semibold transition-colors duration-200 focus:outline-none ${
+                    selected === value
+                      ? 'text-green-700'
+                      : 'text-gray-700 hover:text-green-700'
+                  }`}
+                  onClick={() => setSelected(value)}
+                  style={{ zIndex: 1 }}
+                >
+                  {label}
+                </button>
+              ))}
+              <div
+                ref={indicatorRef}
+                className="absolute bottom-0 h-1 rounded bg-green-700 transition-all duration-300"
+                style={{
+                  left: indicatorStyle.left,
+                  width: indicatorStyle.width,
+                  zIndex: 0,
+                }}
+              />
+            </div>
+          </div>
         </div>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-        {current?.images.map(({ imageLink }, idx) => (
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+        {images.map((imageLink, idx) => (
           <div key={idx} className="w-full">
             <div className="relative h-40 w-full overflow-hidden rounded-lg shadow">
               <Image
@@ -195,5 +138,3 @@ export default function GalleryTab() {
     </div>
   );
 }
-
-// export default GalleryTab; (removed duplicate) doblamos agofer  hierros hb  termium 

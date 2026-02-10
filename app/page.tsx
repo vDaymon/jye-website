@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
+import SatisfiedClients from "./components/SatisfiedClients";
 import GalleryTab from "./components/GalleryTab";
 import LogosCarousel from "./components/LogosCarousel";
 import Projects from "./components/Projects";
@@ -18,6 +19,7 @@ export default function Home() {
       <main className="flex flex-col gap-20 pt-24 lg:pt-28">
         <Hero />
         <Services />
+        <SatisfiedClients />
         <GalleryTab />
         <LogosCarousel />
         <Projects />

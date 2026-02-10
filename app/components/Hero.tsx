@@ -10,18 +10,21 @@ const handleScrollToServices = () => {
 export default function Hero() {
   return (
     <section id="hero" className="relative isolate h-[75vh] overflow-hidden -mt-[68px] w-full">
-      <video
-        className="absolute inset-0 z-0 w-full h-full object-cover"
-        src="/webm/hero.webm"
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-      />
-      <div className="absolute inset-0 z-0 bg-black/60" />
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <video
+          className="absolute left-1/2 top-1/2 h-auto w-auto min-h-full min-w-full -translate-x-1/2 -translate-y-1/2 object-cover max-w-none"
+          src="/webm/hero.webm"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+        />
+      </div>
+      <div className="pointer-events-none absolute inset-0 z-10 bg-black/60" />
 
-      <div className="relative z-10 mx-auto flex h-full max-w-5xl flex-col items-center justify-center gap-6 px-6 text-center">
+      <div className="relative z-20 mx-auto flex h-full max-w-5xl flex-col items-center justify-center gap-6 px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

@@ -61,8 +61,8 @@ export default function Contact() {
               target="_blank"
               rel="noreferrer"
             >
-              <Image src="/imgs/logos/whatsapp.png" alt="WhatsApp" width={40} height={40} className="h-5 w-5" />
-              WhatsApp
+              <Image src="/imgs/logos/whatsapp.png" alt="WhatsApp" width={24} height={24} className="h-6 w-6" style={{ filter: 'brightness(0) invert(1)' }} />
+              <span className="text-white">WhatsApp</span>
             </a>
           </AnimateIn>
         </div>

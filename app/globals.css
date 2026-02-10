@@ -25,10 +25,14 @@ a:hover {
 }
 
 img,
-video,
 iframe {
   max-width: 100%;
   height: auto;
+}
+
+video {
+  max-width: 100%;
+  display: block;
 }
 
 @keyframes float-slow {
