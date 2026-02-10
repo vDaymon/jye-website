@@ -1,50 +1,36 @@
-# Landing corporativa con Vite
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Sitio de una sola página creado con React 19, TypeScript y Vite. Presenta una agencia digital con secciones de servicios, proyectos, testimonios y contacto.
+## Getting Started
 
-## Requisitos previos
-
-- Node.js 18+
-- npm 9+
-
-## Instalación
+First, run the development server:
 
 ```bash
-npm install
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## Scripts disponibles
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- `npm run dev` inicia el servidor de desarrollo en modo HMR.
-- `npm run lint` ejecuta ESLint con la configuración incluida.
-- `npm run build` compila el proyecto (TypeScript + Vite) en `dist/`.
-- `npm run preview` sirve la compilación de producción.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## Características principales
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-- Animaciones declarativas con `framer-motion` en héroe, servicios, proyectos y testimonios.
-- Navegación sticky con scroll suave entre secciones.
-- Paleta verde definida mediante CSS variables en `src/index.css`.
-- Componentes modulares en `src/components/` para fácil mantenimiento.
-- Configuración estricta de TypeScript con separación de `tsconfig.app.json` y `tsconfig.node.json`.
+## Learn More
 
-## Estructura relevante
+To learn more about Next.js, take a look at the following resources:
 
-```
-src/
-  App.tsx             # Ensambla el layout principal
-  index.css           # Estilos globales y tokens de color
-  components/
-    Navbar.tsx        # Navegación principal con scroll
-    Hero.tsx          # Sección hero con CTA
-    Services.tsx      # Tarjetas de servicios animadas
-    Projects.tsx      # Grid de proyectos destacados
-    Testimonials.tsx  # Testimonios con animación in-view
-    Footer.tsx        # Información de contacto
-```
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Próximos pasos sugeridos
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-- Ajustar contenidos reales (textos, links, logos).
-- Revisar la experiencia móvil con herramientas de DevTools.
-- Integrar analytics o formulario de contacto según necesidades.
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
