@@ -2,8 +2,11 @@ import Image from 'next/image'
 import AnimateIn from './AnimateIn'
 
 export default function Contact() {
-  const phone = '+57 310 8210408'
-  const whatsappLink = `https://wa.me/${phone.replace(/\D/g, '')}`
+  const phones = [
+    { label: 'Celular 1', number: '+57 310 8210408' },
+    { label: 'Celular 2', number: '+57 301 722 4104' },
+  ] as const
+  const whatsappLink = `https://wa.me/${phones[0].number.replace(/\D/g, '')}`
   const address = 'Calle 65 #74-105 San German'
   const mapsQuery = encodeURIComponent(address + ' Colombia')
   const mapsSrc = `https://maps.google.com/maps?q=${mapsQuery}&z=15&output=embed`
@@ -26,12 +29,16 @@ export default function Contact() {
             <p className="max-w-xs text-sm text-slate-600">
               Atendemos proyectos de estructuras metálicas en Medellín, Antioquia y el Área Metropolitana.
             </p>
-            <p className="text-sm text-slate-600">
-              <strong className="font-semibold text-slate-900">Tel:</strong>{' '}
-              <a className="text-[#2c6334] hover:underline" href={`tel:${phone}`}>
-                {phone}
-              </a>
-            </p>
+            <div className="space-y-1 text-sm text-slate-600">
+              {phones.map(({ label, number }) => (
+                <p key={label}>
+                  <strong className="font-semibold text-slate-900">{label}:</strong>{' '}
+                  <a className="text-[#2c6334] hover:underline" href={`tel:${number.replace(/\s/g, '')}`}>
+                    {number}
+                  </a>
+                </p>
+              ))}
+            </div>
             <p className="text-sm text-slate-600">
               <strong className="font-semibold text-slate-900">Email:</strong>{' '}
               <a className="text-[#2c6334] hover:underline" href="mailto:estructurasmetalicasje@gmail.com">
