@@ -57,7 +57,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Eliminados los rectángulos decorativos de los lados */}
+      {/* Eliminados los rectángulos decorativos de los lados  ok*/}
     </section>
   )
 }
